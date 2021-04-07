@@ -126,9 +126,7 @@ public class ExecutorSchedulerTest extends AbstractSchedulerConcurrencyTests {
             t -= sleepStep;
             finish = memoryMXBean.getHeapMemoryUsage().getUsed();
         }
-        //TODO: CHange double to float should solve the issue.
-        //FIXME: Change required to cast the value in such a way that the result is not truncated.
-        fail(String.format("Tasks retained: %.3f -> %.3f -> %.3f", initial / 1024 / 1024.0, after / 1024 / 1024.0, finish / 1024 / 1024d));
+        fail(String.format("Tasks retained: %.3f -> %.3f -> %.3f", initial / 1024 / 1024.0, after / 1024 / 1024.0, finish / 1024 / 1024.0));//f also works
     }
 
     @Test
