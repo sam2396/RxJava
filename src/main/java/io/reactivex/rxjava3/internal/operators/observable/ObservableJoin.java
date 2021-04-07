@@ -204,9 +204,8 @@ public final class ObservableJoin<TLeft, TRight, TLeftEnd, TRightEnd, R> extends
                     }
 
                     Object val = q.poll();
-                    //TODO: Change to use Equals so that different objects entities and values are compared correctly.
-                    //FIXME: Different objects comparison done leading to wrongful checking so Change.
-                    if (mode == LEFT_VALUE) {
+
+                    if (mode.equals(LEFT_VALUE)) {
                         @SuppressWarnings("unchecked")
                         TLeft left = (TLeft)val;
 
