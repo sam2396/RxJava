@@ -70,16 +70,8 @@ public class ObservableZipIterableTest extends RxJavaTest {
         }
 
     };
-    //TODO: Change and replace with lambda.
-    //FIXME:Specifying the types of parameters is useful so change required.
-    Function3<Object, Object, Object, String> zipr3 = new Function3<Object, Object, Object, String>() {
 
-        @Override
-        public String apply(Object t1, Object t2, Object t3) {
-            return "" + t1 + t2 + t3;
-        }
-
-    };
+    Function3<Object, Object, Object, String> zipr3 = (t1, t2, t3) -> "" + t1 + t2 + t3;
 
     @Test
     public void zipIterableSameSize() {
