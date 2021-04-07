@@ -20,6 +20,7 @@ import static org.junit.Assert.assertTrue;
 import org.junit.After;
 import org.junit.Test;
 
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 public class SchedulerTest {
