@@ -36,6 +36,8 @@ public class ObservableMergeMaxConcurrentTest extends RxJavaTest {
 
     @Before
     public void before() {
+        //TODO: Change and consider giving reference to where it is being utilized or remove it.
+        //FIXME: stringObserver is not being utilized by the class or it's methods at all so change and use it or remove it.
         stringObserver = TestHelper.mockObserver();
     }
 
