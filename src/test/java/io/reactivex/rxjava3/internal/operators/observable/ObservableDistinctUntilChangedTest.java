@@ -218,9 +218,8 @@ public class ObservableDistinctUntilChangedTest extends RxJavaTest {
             RxJavaPlugins.reset();
         }
    }
-    //TODO: Change to implement static.
-    //FIXME: No embedded reference to object which created it so Change required.
-    class Mutable {
+
+    static class Mutable {
         int value;
     }
 

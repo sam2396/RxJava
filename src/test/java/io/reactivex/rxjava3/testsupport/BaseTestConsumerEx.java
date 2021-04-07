@@ -33,7 +33,7 @@ extends BaseTestConsumer<T, U> {
 
     protected int establishedFusionMode;
 
-    
+
     /**
      * Indicates that one of the awaitX method has timed out.
      * @since 2.0.7
