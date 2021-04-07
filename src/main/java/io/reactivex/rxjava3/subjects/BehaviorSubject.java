@@ -399,9 +399,13 @@ public final class BehaviorSubject<T> extends Subject<T> {
     }
 
     void setCurrent(Object o) {
-        //TODO: Change required for lock. Include try block to catch exception.
-        //FIXME: Exception needs catching incase it happens, so Change.
+
         writeLock.lock();
+        try{
+            //Executable Code
+        } finally{
+            writeLock.unlock();
+        }
         index++;
         value.lazySet(o);
         writeLock.unlock();
