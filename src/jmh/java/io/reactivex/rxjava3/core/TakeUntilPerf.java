@@ -40,6 +40,8 @@ public class TakeUntilPerf implements Consumer<Integer> {
 
     @Override
     public void accept(Integer t) {
+        // TODO: items = items+1 is the better option, as now it is atomic. Change required.
+        // FIXME:Not being atomic, synchronization of hardware and software required for i++. So change that.
         items++;
     }
 
