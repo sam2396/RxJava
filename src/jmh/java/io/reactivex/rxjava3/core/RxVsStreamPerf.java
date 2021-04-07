@@ -79,6 +79,8 @@ public class RxVsStreamPerf {
                 return Observable.range(v, 2);
             }
         });
+        //TODO: Remove the field called 'values' from the project altogether
+        //FIXME:Field called 'values' is never used at all
 
         values = range.toList().blockingGet();
     }
