@@ -101,9 +101,7 @@ public class ObservableZipTests extends RxJavaTest {
         Observable<Object> result = Observable.zip(observables, new Function<Object[], Object>() {
             @Override
             public Object apply(Object[] args) {
-                //TODO: Change to Arrays.toString to get the appropriate value of args.
-                //FIXME: Accomodation of the correct output of args requires change.
-                System.out.println("received: " + args);
+                System.out.println("received: " + Arrays.toString(args));
                 Assert.assertEquals("No argument should have been passed", 0, args.length);
                 return invoked;
             }
