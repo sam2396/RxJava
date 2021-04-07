@@ -37,6 +37,8 @@ extends BaseTestConsumer<T, U> {
      * The optional tag associated with this test consumer.
      * @since 2.0.7
      */
+    //TODO: Change the method invocation or superclass name as it is not being acccessed.
+    //FIXME: tag is defined the same way as another field but is not used, so updating methods can be confusing so change.
     protected CharSequence tag;
 
     /**
